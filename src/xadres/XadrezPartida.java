@@ -18,11 +18,11 @@ public class XadrezPartida {
 	
 	public XadrezPiece[][] getPieces(){
 		//temporario
-		XadrezPiece[][] mat = new XadrezPiece[board.getRows()][board.getColunms()];
+		XadrezPiece[][] mat = new XadrezPiece[board.getRows()][board.getColumns()];
 		
 		//para percorrer a matriz
 		for(int i=0;i<board.getRows();i++) {
-			for(int j=0; j<board.getColunms();j++) {
+			for(int j=0; j<board.getColumns();j++) {
 				mat[i][j] = (XadrezPiece) board.piece(i,j);
 			}
 		}
@@ -33,7 +33,7 @@ public class XadrezPartida {
 	private void initialSetup() {
 		//cria a torre na possição 0,0 da matriz do tabuleiro
 		board.PlacePiece(new Torre(board, Color.BLACK), new Position(0, 0));
-		board.PlacePiece(new Rei(board, Color.WHITE), new Position(0, 4));
+		board.PlacePiece(new Rei(board, Color.BLACK), new Position(0, 4));
 		board.PlacePiece(new Torre(board, Color.WHITE), new Position(0, 7));
 	}
 }
