@@ -2,3 +2,5 @@
 /XadrezPiece.class
 /XadrezPartida.class
 /Torre.class
+/XadrezException.class
+/XadrezPosition.class

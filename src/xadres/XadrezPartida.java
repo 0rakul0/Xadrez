@@ -1,8 +1,6 @@
 package src.xadres;
 
 import src.tabuleiro.Board;
-import src.tabuleiro.Position;
-import src.xadres.pieces.Rei;
 import src.xadres.pieces.Torre;
 
 public class XadrezPartida {
@@ -30,10 +28,15 @@ public class XadrezPartida {
 		return mat;
 	}
 	
+	//Metodo para novaPeca
+	private void porNovaPeca(char column, int row, XadrezPiece piece) {
+		//esse metodo vai receber as novas coordenadas vindas do XadrezPosition
+		board.PlacePiece(piece, new XadrezPosition(column, row).toPosition());
+	}
+	
 	private void initialSetup() {
 		//cria a torre na possição 0,0 da matriz do tabuleiro
-		board.PlacePiece(new Torre(board, Color.BLACK), new Position(0, 0));
-		board.PlacePiece(new Rei(board, Color.BLACK), new Position(0, 4));
-		board.PlacePiece(new Torre(board, Color.WHITE), new Position(0, 7));
+		porNovaPeca('a', 5,  new Torre(board, Color.BLACK));
+		porNovaPeca('h', 3,  new Torre(board, Color.BLACK));
 	}
 }
