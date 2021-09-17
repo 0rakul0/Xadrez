@@ -1,12 +1,13 @@
 package src.program;
 
-import src.tabuleiro.Board;
+import src.xadres.XadrezPartida;
 
 public class aplication {
     public static void main(String[] args) {
     	
-    	Board board = new Board(8, 8);
+    	XadrezPartida xadrezPartida = new XadrezPartida();
     	
+    	UI.printBoard(xadrezPartida.getPieces());
     	
     }
 }

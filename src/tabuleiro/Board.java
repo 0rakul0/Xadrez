@@ -8,7 +8,6 @@ public class Board {
 	public Board(int rows, int colunms) {
 		this.rows = rows;
 		this.colunms = colunms;
-		
 		pieces = new Piece[rows][colunms];
 	}
 
@@ -27,7 +26,12 @@ public class Board {
 	public void setColunms(int colunms) {
 		this.colunms = colunms;
 	}
-	
-	
-	
+
+	//metodos e sobrecarga
+	public Piece piece(int row, int colunm) {
+		return pieces[row][colunm];		
+	}
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 }
