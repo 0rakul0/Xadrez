@@ -1,6 +1,7 @@
 package src.xadres;
 
 import src.tabuleiro.Board;
+import src.xadres.pieces.Rei;
 import src.xadres.pieces.Torre;
 
 public class XadrezPartida {
@@ -36,7 +37,13 @@ public class XadrezPartida {
 	
 	private void initialSetup() {
 		//cria a torre na possição 0,0 da matriz do tabuleiro
-		porNovaPeca('a', 5,  new Torre(board, Color.BLACK));
-		porNovaPeca('h', 3,  new Torre(board, Color.BLACK));
+		porNovaPeca('a', 1,  new Torre(board, Color.BLACK));
+		porNovaPeca('e', 1,  new Rei(board, Color.BLACK));
+		porNovaPeca('h', 1,  new Torre(board, Color.BLACK));
+	
+		porNovaPeca('a', 8,  new Torre(board, Color.WHITE));
+		porNovaPeca('e', 8,  new Rei(board, Color.WHITE));
+		porNovaPeca('h', 8,  new Torre(board, Color.WHITE));
+		
 	}
 }
